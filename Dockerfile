@@ -5,7 +5,7 @@ ARG EFA_VER=1.6.2
 ARG EFA_URL=https://s3-us-west-2.amazonaws.com/aws-efa-installer
 
 RUN apt-get update \
- && apt install -y curl libxml2
+ && apt install -y curl libxml2 libxml2-dev
 RUN mkdir -p /opt/aws-efa-installer \
  && cd /opt/aws-efa-installer \
  && curl -O https://s3-us-west-2.amazonaws.com/aws-efa-installer/aws-efa-installer-1.7.0.tar.gz \
